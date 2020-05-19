@@ -16,7 +16,11 @@ public class MainApp {
     public static void main(String[] args) {
         //ApplicationContext context=new FileSystemXmlApplicationContext("D:/Spring_workspace/Spring01/src/Beans.xml");
         ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");
-        HelloWorld obj= (HelloWorld) context.getBean("helloWorld");
-        obj.getMessage();
+        HelloWorld obja= (HelloWorld) context.getBean("helloWorld");
+        obja.setMessage("tanlei");
+        obja.getMessage();
+        HelloWorld objb= (HelloWorld) context.getBean("helloWorld");
+        objb.getMessage();
+
     }
 }
